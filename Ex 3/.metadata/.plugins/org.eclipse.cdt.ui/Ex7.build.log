@@ -1,0 +1,22 @@
+16:18:24 **** Incremental Build of configuration Debug for project Ex7 ****
+make -j16 all 
+arm-none-eabi-gcc -o "Ex7.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Lab_VXL\Lab 1\Ex7\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ex7.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Ex7.elf
+ 
+arm-none-eabi-size   Ex7.elf 
+arm-none-eabi-objdump -h -S  Ex7.elf  > "Ex7.list"
+arm-none-eabi-objcopy  -O ihex  Ex7.elf  "Ex7.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4632	     44	   1572	   6248	   1868	Ex7.elf
+arm-none-eabi-objcopy  -O binary  Ex7.elf  "Ex7.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Ex7.hex
+Finished building: Ex7.list
+Finished building: Ex7.bin
+ 
+ 
+ 
+
+16:18:25 Build Finished. 0 errors, 0 warnings. (took 778ms)
+

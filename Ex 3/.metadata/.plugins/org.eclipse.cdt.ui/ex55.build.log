@@ -1,0 +1,22 @@
+11:01:28 **** Incremental Build of configuration Debug for project ex55 ****
+make -j16 all 
+arm-none-eabi-gcc -o "ex55.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Lab_VXL\Lab 1\Ex5\ex5\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ex55.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ex55.elf
+ 
+arm-none-eabi-size   ex55.elf 
+arm-none-eabi-objdump -h -S  ex55.elf  > "ex55.list"
+arm-none-eabi-objcopy  -O ihex  ex55.elf  "ex55.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4964	     20	   1572	   6556	   199c	ex55.elf
+arm-none-eabi-objcopy  -O binary  ex55.elf  "ex55.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ex55.hex
+Finished building: ex55.list
+Finished building: ex55.bin
+ 
+ 
+ 
+
+11:01:29 Build Finished. 0 errors, 0 warnings. (took 572ms)
+
